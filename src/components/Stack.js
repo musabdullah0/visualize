@@ -26,7 +26,7 @@ function Stack() {
             </div>
             <div className="controls">
                 <div className="push">
-                    <input name="pushInput" type="text" inputmode="numeric" pattern="[0-9]*" onChange={e => setPushVal(parseInt(e.target.value))} />
+                    <input name="pushInput" type="text" inputMode="numeric" pattern="[0-9]*" onChange={e => setPushVal(parseInt(e.target.value))} />
                     <button onClick={() => setStack([pushVal, ...stack])}>push</button>
                 </div>
                 <div className="pop">

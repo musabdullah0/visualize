@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    height: 80vh;
+}
+
+.queue {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.queue ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+}
+
+.queueItem {
+    background-color: #AEC5EB;
+    border: 1px solid #282c34;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.controls {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 15px;
+}
+
+button {
+    border-radius: 6px;
+    border: 1px solid #282c34;
+    font-size: 16px;
+    padding: 7px;
+}
+
+.enqueue {
+    display: flex;
+}
+
+.enqueue input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #AEC5EB;
+    width: 30%;
+    margin-right: 20px;
+}
+.enqueue input:focus {
+    outline: none;
+    border-bottom: 2px solid #282c34;
+    background: #e6ecf5;
+}
+
+.dequeue {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.dequeue button {
+    margin-right: 20px;
+}

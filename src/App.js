@@ -1,16 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Stack from './components/Stack'
+import Queue from './components/Queue'
+
+
+let dslist = ['Stack', 'Queue']
+
+
+function DS(props) {
+  switch (props.whichDS) {
+    case 'Stack':
+      return <Stack />
+    case 'Queue':
+      return <Queue />
+    default:
+      return <h1>DS not found :(</h1>
+  }
+}
+
+function DSPicker(props) {
+  return (
+    <div className="dsPicker">
+      {dslist.map((ds) => <button key={ds} className="dsChoice" onClick={() => props.setWhichDS(ds)}>{ds}</button>)}
+    </div>
+  )
+}
+
 
 function App() {
+
+  const [whichDS, setWhichDS] = useState('choosing')
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Stack Visualizer</h1>
+        <h1>{whichDS === 'choosing' ? 'Pick a Data Structure' : whichDS + ' Visualizer'}</h1>
+        <i className="fa fa-home" onClick={() => setWhichDS('choosing')}></i>
       </header>
-      <Stack />
+
+      {whichDS === 'choosing' ? <DSPicker setWhichDS={setWhichDS} /> : <DS whichDS={whichDS} />}
+
     </div>
   );
 }

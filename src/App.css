@@ -34,3 +34,22 @@
     transform: rotate(360deg);
   }
 }
+
+.fa {
+  height: 28px;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.dsPicker {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dsChoice {
+  padding: 30px;
+  font-size: 32px;
+  background: #e6ecf5;
+}
