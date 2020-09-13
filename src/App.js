@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Stack from './components/Stack'
 import Queue from './components/Queue'
+import LinkedList from './components/LinkedList'
 
 
-let dslist = ['Stack', 'Queue']
+
+let dslist = ['Stack', 'Queue', 'LinkedList']
 
 
 function DS(props) {
@@ -14,6 +16,8 @@ function DS(props) {
       return <Stack />
     case 'Queue':
       return <Queue />
+    case 'LinkedList':
+      return <LinkedList />
     default:
       return <h1>DS not found :(</h1>
   }
