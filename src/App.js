@@ -4,10 +4,11 @@ import './App.css';
 import Stack from './components/Stack'
 import Queue from './components/Queue'
 import LinkedList from './components/LinkedList'
+import BinarySearchTree from './components/BinarySearchTree'
 
 
 
-let dslist = ['Stack', 'Queue', 'LinkedList']
+let dslist = ['Stack', 'Queue', 'LinkedList', 'Binary Search Tree']
 
 
 function DS(props) {
@@ -18,6 +19,8 @@ function DS(props) {
       return <Queue />
     case 'LinkedList':
       return <LinkedList />
+    case 'Binary Search Tree':
+      return <BinarySearchTree />
     default:
       return <h1>DS not found :(</h1>
   }
